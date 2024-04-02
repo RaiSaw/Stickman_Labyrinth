@@ -271,7 +271,7 @@ wall_list.add(wall)
 wall = Wall( 360, 320, 50, 10, PURPLE)
 wall_list.add(wall)
 
-wall = Wall( 460, 320, 50, 10, PURPLE)
+wall = Wall( 450, 320, 50, 10, PURPLE)
 wall_list.add(wall)
 
 wall = Wall( 490, 350, 50, 10, PURPLE)
@@ -460,8 +460,8 @@ pygame.mixer.music.load('Caketown.mp3')
 pygame.mixer.music.play(-1) # play in indefinite loop
 
 # Event/ Collide sounds
-collide = pygame.mixer.Sound("punch.wav")
-jump = pygame.mixer.Sound("whiff.wav")
+collide = pygame.mixer.Sound("collide.wav")
+jump = pygame.mixer.Sound("jump.wav")
 
 # Loop until the user clicks the close button.
 done = False
