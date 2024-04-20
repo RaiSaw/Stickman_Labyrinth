@@ -1,4 +1,3 @@
-# Make Stickman jump, add sprites gravity and maze
 import pygame
 
 # Define some colors
@@ -153,10 +152,11 @@ HT = 500
 size = [WIDTH, HT]
 screen = pygame.display.set_mode(size)
 
-pygame.display.set_caption("Stickman Labyrinth")
+pygame.display.set_caption("Stickman_Labyrinth")
 # create a sprite group list
 all_sprite_list = pygame.sprite.Group()
 wall_list = pygame.sprite.Group()
+
 # create instances of class sprite Wall
 # walls
 wall = Wall(0, 0, 10, 600, GREEN)
@@ -182,9 +182,7 @@ wall_list.add(wall)
 
 wall = Wall( 230, 380, 70, 10, PURPLE)
 wall_list.add(wall)
-# door
-wall = Wall(260, 340, 20, 40, BLACK)
-wall_list.add(wall)
+
 #stairs2
 wall = Wall(70, 390, 50, 10, PURPLE)
 wall_list.add(wall)
@@ -194,42 +192,7 @@ wall_list.add(wall)
 
 wall = Wall(10, 330, 50, 10, PURPLE)
 wall_list.add(wall)
-# doors
-wall = Wall(10, 450, 20, 40, BLACK)
-wall_list.add(wall)
 
-wall = Wall(10, 290, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(70, 400, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(260, 160, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(310, 270, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(370, 360, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(420, 250, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(570, 340, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(570, 390, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(670, 10, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(670, 260, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall(670, 450, 20, 40, BLACK)
-wall_list.add(wall)
 #stairs3
 wall = Wall( 330, 440, 50, 10, PURPLE)
 wall_list.add(wall)
@@ -302,21 +265,6 @@ wall_list.add(wall)
 wall = Wall( 640, 130, 50, 10, PURPLE)
 wall_list.add(wall)
 
-#doors
-wall = Wall( 530, 260, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 560, 110, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 530, 10, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 610, 200, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 670, 90, 20, 40, BLACK)
-wall_list.add(wall)
 # stairs8
 wall = Wall( 500, 220, 50, 10, PURPLE)
 wall_list.add(wall)
@@ -352,15 +300,6 @@ wall_list.add(wall)
 wall = Wall( 390, 50, 70, 10, PURPLE)
 wall_list.add(wall)
 
-wall = Wall( 420, 10, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 420, 120, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 420, 170, 20, 40, BLACK)
-wall_list.add(wall)
-
 #stairs10
 wall = Wall( 440, 80, 50, 10, PURPLE)
 wall_list.add(wall)
@@ -378,12 +317,6 @@ wall_list.add(wall)
 wall = Wall( 120, 320, 50, 10, PURPLE)
 wall_list.add(wall)
 
-wall = Wall( 150, 330, 20, 40, BLACK)
-wall_list.add(wall)
-
-wall = Wall( 210, 270, 20, 40, BLACK)
-wall_list.add(wall)
-
 wall = Wall( 180, 260, 50, 10, PURPLE)
 wall_list.add(wall)
 
@@ -394,10 +327,7 @@ wall = Wall( 430, 440, 50, 10, PURPLE)
 wall_list.add(wall)
 wall = Wall( 460, 400, 50, 10, PURPLE)
 wall_list.add(wall)
-wall = Wall( 490, 360, 20, 40, BLACK)
-wall_list.add(wall)
-wall = Wall( 520, 450, 20, 40, BLACK)
-wall_list.add(wall)
+
 #stairs13
 wall = Wall(70, 250, 50, 10, PURPLE)
 wall_list.add(wall)
@@ -406,8 +336,6 @@ wall = Wall(40, 220, 50, 10, PURPLE)
 wall_list.add(wall)
 
 wall = Wall(10, 190, 50, 10, PURPLE)
-wall_list.add(wall)
-wall = Wall(60, 230, 20, 40, BLACK)
 wall_list.add(wall)
 
 #stairs14
@@ -424,10 +352,6 @@ wall = Wall(60, 140, 50, 10, PURPLE)
 wall_list.add(wall)
 wall = Wall(10, 60, 40, 10, PURPLE)
 wall_list.add(wall)
-wall = Wall(120, 150, 20, 40, BLACK)
-wall_list.add(wall)
-wall = Wall(10, 150, 20, 40, BLACK)
-wall_list.add(wall)
 
 #stairs15
 wall = Wall(210, 110, 50, 10, PURPLE)
@@ -441,7 +365,49 @@ wall_list.add(wall)
 
 wall = Wall(270, 50, 60, 10, PURPLE)
 wall_list.add(wall)
+
 #doors
+
+wall = Wall( 420, 10, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 420, 120, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 420, 170, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 150, 330, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 210, 270, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall(60, 230, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall( 530, 260, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 560, 110, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 530, 10, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 610, 200, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall( 670, 90, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall( 490, 360, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall( 520, 450, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall(260, 340, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall(120, 150, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall(10, 150, 20, 40, BLACK)
+wall_list.add(wall)
 wall = Wall(165, 10, 20, 40, BLACK)
 wall_list.add(wall)
 wall = Wall(290, 10, 20, 40, BLACK)
@@ -449,6 +415,41 @@ wall_list.add(wall)
 wall = Wall(290, 60, 20, 40, BLACK)
 wall_list.add(wall)
 wall = Wall(270, 410, 20, 40, BLACK)
+wall_list.add(wall)
+wall = Wall(10, 450, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(10, 290, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(70, 400, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(260, 160, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(310, 270, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(370, 360, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(420, 250, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(570, 340, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(570, 390, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(670, 10, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(670, 260, 20, 40, BLACK)
+wall_list.add(wall)
+
+wall = Wall(670, 450, 20, 40, BLACK)
 wall_list.add(wall)
 
 # add instances to the list
@@ -515,6 +516,7 @@ while not done:
         # If the stickman gets near the left side, shift the world right (+x)
         if stickman.rect.left < 0:
             stickman.rect.left = 0
+
 
     # --- Game Logic
 
