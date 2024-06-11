@@ -203,13 +203,13 @@ stairs = [
 [ 610, 160, 50, 10, YG],
 [ 640, 130, 50, 10, BLUE],
 # stairs8
-[ 505, 220, 40, 10, PURPLE],
+[ 505, 220, 50, 10, PURPLE],
 [ 490, 250, 80, 10, YG],
 [ 560, 280, 50, 10, PEACH],
 #stair9
 [ 640, 50, 50, 10, PURPLE],
-[ 560, 100, 50, 10, OLIVE],
-[ 520, 150, 40, 10, ORANGE],
+[ 570, 100, 40, 10, OLIVE],
+[ 520, 140, 40, 10, BLACK],
 [ 470, 110, 50, 10, YG],
 [ 370, 80, 50, 10, BLUE],
 [ 340, 110, 50, 10, PEACH],
@@ -297,7 +297,7 @@ for item in stairs:
 # add instances to the list
 all_sprite_list.add(wall_list)
 
-door = Wall(560, 110, 20, 40, BLACK),
+door = Wall(560, 100, 20, 40, BLACK),
 exit = pygame.sprite.Group()
 exit.add(door)
 all_sprite_list.add(exit)
